@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Cambiado a una fuente similar a la de Roblox */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('https://i.postimg.cc/GpT70rby/Picsart-23-10-27-15-55-44-737.jpg') no-repeat center center fixed; /* Agrega tu URL de imagen de fondo */
+            background-size: cover;
+        }
+
+        .login-container {
+            background-color: transparent; /* Cambiado a fondo transparente */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #808080; /* Cambiado a gris */
+        }
+
+        input {
+            padding: 8px;
+            border: none; /* Eliminado el borde blanco */
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.1); /* Fondo negro transparente */
+        }
+
+        h2 {
+            color: #808080; /* Cambiado a gris */
+            font-weight: bold; /* Agregado para hacer que la fuente sea negrita */
+            margin-bottom: 10px; /* Agregado un espacio inferior para separar del resto del formulario */
+            display: none; /* Ocultado el texto "Iniciar Sesión" */
+        }
+
+        button {
+            background-color: #fff; /* Cambiado a blanco */
+            color: #808080; /* Cambiado a gris */
+            padding: 10px;
+            border: none; /* Eliminado el borde blanco */
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f4f4f4; /* Cambiado a un gris más claro en hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <form id="login-form">
+            <input type="text" id="username" name="username" placeholder="Usuario/Correo/Teléfono" required>
+
+            <input type="password" id="password" name="password" placeholder="Contraseña" required>
+
+            <button type="button" onclick="login()">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Aquí puedes agregar la lógica de autenticación
+            // Por ejemplo, verificar si las credenciales son válidas
+
+            alert("Usuario/Correo/Teléfono: " + username + "\nContraseña: " + password);
+        }
+    </script>
+</body>
+</html>
